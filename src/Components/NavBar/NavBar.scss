@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $card-bg;
+    border-bottom: 1px solid $text-dark;
+}
