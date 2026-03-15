@@ -1,11 +1,13 @@
-@import '../../styles/variables.scss';
+@use "../../styles/variables" as *;
+@use "../../styles/functions" as *;
+@use "../../styles/mixins" as *;
 
 .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: $card-bg;
+    background-color: $bg-main;
     border-bottom: 1px solid $text-dark;
 
     &__logo {
