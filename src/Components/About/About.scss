@@ -1,20 +1,65 @@
 @import '../../styles/variables.scss';
 
 .about {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
     background-color: $bg-main;
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
     border-bottom: 1px solid $text-dark;
 
     &__content {
+        max-width: 800px;
+        width: 100%;
         display: flex;
-        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-        a {
-            text-decoration: none;
+    &__title {
+        font-family: $font-family-primary;
+        font-size: 4.5rem;
+        line-height: 1;
+        margin: 0;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+
+        &-first {
             color: $text-dark;
+            margin-right: 0.25em;
+        }
+
+        &-last {
+            color: $accent-red;
+        }
+    }
+
+    &__divider {
+        width: 100%;
+        max-width: 140px;
+        height: 1px;
+        margin: 1.5rem 0 3rem 0;
+        background: linear-gradient(90deg, rgba(167,27,27,1) 0%, rgba(167,27,27,0) 100%);
+    }
+
+    &__description {
+        font-family: $font-family-secondary;
+        font-size: 1.2rem;
+        color: #554D5A; /* slightly darker but muted */
+        line-height: 1.8;
+        margin: 0 0 2rem 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 4rem 1rem;
+        
+        &__title {
+            font-size: 3.5rem;
         }
     }
 }
