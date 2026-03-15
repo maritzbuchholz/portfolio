@@ -2,11 +2,21 @@
 
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     padding: 1rem;
     background-color: $bg-main;
     border-top: 1px solid $text-dark;
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    font-size: 1rem;
+    &-first {
+        color: $text-dark;
+        }
+
+    &-last {
+        color: $accent-red;
+        }
 
     &__content {
         display: flex;
