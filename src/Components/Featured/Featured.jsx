@@ -9,8 +9,8 @@ const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLi
         <div className="featured__card-header">
             <h3 className="featured__card-title">{title}</h3>
             <div className="featured__card-links">
-                {githubLink && <a href={githubLink} target="_blank" rel="noreferrer"><img src={site} alt="site icon" /></a>}
-                {externalLink && <a href={externalLink} target="_blank" rel="noreferrer"><img src={git} alt="git icon" /></a>}
+                {githubLink && <a href={githubLink} target="_blank" rel="noreferrer"><img src={site} alt="site icon" className="featured__card-icon" /></a>}
+                {externalLink && <a href={externalLink} target="_blank" rel="noreferrer"><img src={git} alt="git icon" className="featured__card-icon" /></a>}
             </div>
         </div>
         <p className="featured__card-description">{description}</p>

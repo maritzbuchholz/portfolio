@@ -87,13 +87,18 @@
             gap: 1rem;
             
             a {
-                color: $text-muted;
-                transition: color 0.2s;
+                transition: opacity 0.2s;
 
                 &:hover {
-                    color: $text-dark;
+                    opacity: 0.7;
                 }
             }
+        }
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+            display: block;
         }
 
         &-description {
