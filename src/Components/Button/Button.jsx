@@ -8,6 +8,13 @@ const EnvelopeIcon = () => (
     </svg>
 );
 
+const ArrowDownIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" className="button__icon-svg">
+        <path d="M12 5V19" />
+        <path d="M19 12L12 19L5 12" />
+    </svg>
+);
+
 const Button = ({
     type = "button",
     variant = "primary", //primary, secondary, delete
@@ -16,21 +23,24 @@ const Button = ({
     to,
     className = "",
     icon,
+    iconRight,
     children,
     ...props
 }) => {
     let combinedClassName = "button button--" + variant;
     if (className) combinedClassName += " " + className;
 
-    const renderIcon = () => {
-        if (icon === "envelope") return <EnvelopeIcon />;
-        return icon;
+    const renderIcon = (iconName) => {
+        if (iconName === "envelope") return <EnvelopeIcon />;
+        if (iconName === "arrow-down") return <ArrowDownIcon />;
+        return iconName;
     };
 
     const content = (
         <>
-            {icon && <span className="button__icon" style={{ display: 'flex', alignItems: 'center' }}>{renderIcon()}</span>}
+            {icon && <span className="button__icon" style={{ display: 'flex', alignItems: 'center' }}>{renderIcon(icon)}</span>}
             <span className="button__text">{children}</span>
+            {iconRight && <span className="button__icon" style={{ display: 'flex', alignItems: 'center' }}>{renderIcon(iconRight)}</span>}
         </>
     );
 
