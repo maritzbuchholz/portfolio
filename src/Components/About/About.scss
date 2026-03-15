@@ -8,8 +8,7 @@
     border-bottom: 1px solid $accent-gold;
 
     &__content {
-        max-width: 800px;
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -46,7 +45,8 @@
         font-size: 1.2rem;
         color: #554D5A; /* slightly darker but muted */
         line-height: 1.8;
-        margin: 0 0 2rem 0;
+        margin: 0 0 1rem 0;
+        text-align: left;
 
         &:last-child {
             margin-bottom: 0;
