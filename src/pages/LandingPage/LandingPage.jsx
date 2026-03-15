@@ -3,6 +3,7 @@ import './LandingPage.scss';
 import NavBar from '../../Components/NavBar/NavBar';
 import Hero from '../../Components/Hero/Hero';
 import About from '../../Components/About/About';
+import Stack from '../../Components/Stack/Stack';
 
 const LandingPage = () => {
     return (
@@ -11,6 +12,7 @@ const LandingPage = () => {
                 <NavBar />
                 <Hero />
                 <About />
+                <Stack />
             </main>
         </div>
     );
