@@ -19,18 +19,18 @@ const Contact = () => {
                 </p>
                 
                 <div className="contact__info">
-                    <div className="contact__info-item">
+                    <a href="mailto:maritzbuchholz@gmail.com" target="_blank" rel="noreferrer" className="contact__info-item">
                         <img src={mailRed} alt="mail icon" className="contact__icon" />
-                        <span>john@example.com</span>
-                    </div>
-                    <div className="contact__info-item">
+                        <span>maritzbuchholz@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/maritzbuchholz/" target="_blank" rel="noreferrer" className="contact__info-item">
                         <img src={linkedIn} alt="linkedin icon" className="contact__icon" />
-                        <span>San Francisco, CA</span>
-                    </div>
-                    <div className="contact__info-item">
+                        <span>linkedin.com/in/maritzbuchholz/</span>
+                    </a>
+                    <a href="https://github.com/maritzbuchholz/" target="_blank" rel="noreferrer" className="contact__info-item">
                         <img src={gitBlue} alt="github icon" className="contact__icon" />
-                        <span>github.com/placeholder</span>
-                    </div>
+                        <span>github.com/maritzbuchholz/</span>
+                    </a>
                 </div>
             </div>
         </section>
