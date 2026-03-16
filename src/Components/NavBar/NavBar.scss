@@ -36,6 +36,11 @@
         a {
             text-decoration: none;
             color: $text-muted;
+            transition: color 0.2s;
+
+            &:hover {
+                color: $text-dark;
+            }
         }
     }
 }
