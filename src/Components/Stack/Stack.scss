@@ -62,14 +62,14 @@
         }
 
         &-line {
-            width: 6rem;
+            width: 80%;
             height: 4px;
             margin-bottom: 1rem;
 
-            &--red { background-color: $accent-red; }
-            &--green { background-color: $accent-green; }
-            &--blue { background-color: $accent-blue; }
-            &--gold { background-color: $accent-gold; }
+            &--red { background: linear-gradient(90deg, rgba($accent-red, 1) 0%, rgba($accent-red, 0) 100%); }
+            &--green { background: linear-gradient(90deg, rgba($accent-green, 1) 0%, rgba($accent-green, 0) 100%); }
+            &--blue { background: linear-gradient(90deg, rgba($accent-blue, 1) 0%, rgba($accent-blue, 0) 100%); }
+            &--gold { background: linear-gradient(90deg, rgba($accent-gold, 1) 0%, rgba($accent-gold, 0) 100%); }
         }
 
         &-title {
