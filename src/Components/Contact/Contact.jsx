@@ -3,19 +3,9 @@ import './Contact.scss';
 
 import Button from '../Button/Button';
 
-const EnvelopeIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="contact__icon contact__icon--red">
-        <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" />
-        <rect x="3" y="5" width="18" height="14" rx="2" strokeLinecap="round" />
-    </svg>
-);
-
-const MapPinIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="contact__icon contact__icon--green">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-        <circle cx="12" cy="10" r="3"></circle>
-    </svg>
-);
+import mailRed from '../../assets/mail-red.svg';
+import linkedIn from '../../assets/linked.svg';
+import gitBlue from '../../assets/gitblue.svg';
 
 const SendIcon = () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -40,12 +30,16 @@ const Contact = () => {
                 
                 <div className="contact__info">
                     <div className="contact__info-item">
-                        <EnvelopeIcon />
+                        <img src={mailRed} alt="mail icon" className="contact__icon" />
                         <span>john@example.com</span>
                     </div>
                     <div className="contact__info-item">
-                        <MapPinIcon />
+                        <img src={linkedIn} alt="linkedin icon" className="contact__icon" />
                         <span>San Francisco, CA</span>
+                    </div>
+                    <div className="contact__info-item">
+                        <img src={gitBlue} alt="github icon" className="contact__icon" />
+                        <span>github.com/placeholder</span>
                     </div>
                 </div>
 

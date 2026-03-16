@@ -71,8 +71,9 @@
     }
 
     &__icon {
-        &--red { color: $accent-red; }
-        &--green { color: $accent-green; }
+        width: 24px;
+        height: 24px;
+        display: block;
     }
 
     &__action {

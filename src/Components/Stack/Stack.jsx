@@ -21,7 +21,7 @@ const Stack = () => {
         {
             category: "Languages",
             accent: "red",
-            items: ["TypeScript", "Python", "Go", "Rust"]
+            items: ["JavaScript", "Python", "Go", "Rust"]
         },
         {
             category: "Frontend",
