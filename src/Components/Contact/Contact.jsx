@@ -1,18 +1,8 @@
 import React from 'react';
 import './Contact.scss';
-
-import Button from '../Button/Button';
-
 import mailRed from '../../assets/mail-red.svg';
 import linkedIn from '../../assets/linked.svg';
 import gitBlue from '../../assets/gitblue.svg';
-
-const SendIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="22" y1="2" x2="11" y2="13"></line>
-        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-    </svg>
-);
 
 const Contact = () => {
     return (
@@ -41,10 +31,6 @@ const Contact = () => {
                         <img src={gitBlue} alt="github icon" className="contact__icon" />
                         <span>github.com/placeholder</span>
                     </div>
-                </div>
-
-                <div className="contact__action">
-                    <Button variant="primary" icon={<SendIcon />}>Send a Message</Button>
                 </div>
             </div>
         </section>
