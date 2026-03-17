@@ -6,7 +6,7 @@ import gitBlue from '../../assets/gitblue.svg';
 
 const Contact = () => {
     return (
-        <section className="contact">
+        <section id="contact" className="contact">
             <div className="contact__content">
                 <h2 className="contact__title">
                     <span className="contact__title-first">Let's</span>

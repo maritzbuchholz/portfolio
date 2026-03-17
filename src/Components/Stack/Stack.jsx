@@ -41,7 +41,7 @@ const Stack = () => {
     ];
 
     return (
-        <section className="stack">
+        <section id="skills" className="stack">
             <div className="stack__content">
                 <h2 className="stack__title">
                     <span className="stack__title-first">Tech</span>

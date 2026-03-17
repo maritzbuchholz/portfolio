@@ -59,7 +59,7 @@ const Featured = () => {
     ];
 
     return (
-        <section className="featured">
+        <section id="featured" className="featured">
             <div className="featured__content">
                 <h2 className="featured__title">
                     <span className="featured__title-first">Featured</span>
