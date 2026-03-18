@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../styles/variables" as *;
 @use "../../styles/functions" as *;
 @use "../../styles/mixins" as *;
@@ -38,7 +39,7 @@
         &:hover {
             transform: translate(2px, 2px);
             box-shadow: 2px 2px 0px $text-dark;
-            background-color: darken($accent-blue, 5%);
+            background-color: color.adjust($accent-blue, $lightness: -5%);
         }
 
         &:active {
@@ -72,7 +73,7 @@
         &:hover {
             transform: translate(2px, 2px);
             box-shadow: 2px 2px 0px $text-dark;
-            background-color: darken(#246B41, 5%);
+            background-color: color.adjust($accent-green, $lightness: -5%);
         }
 
         &:active {
