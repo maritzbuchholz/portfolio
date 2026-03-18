@@ -1,18 +1,13 @@
 import "./Button.scss";
-import { Link } from "react-router-dom";
+import mailIcon from '../../assets/mail.svg';
+import downIcon from '../../assets/down.svg';
 
 const EnvelopeIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" className="button__icon-svg">
-        <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" />
-        <rect x="3" y="5" width="18" height="14" rx="2" strokeLinecap="round" />
-    </svg>
+    <img src={mailIcon} alt="envelope icon" className="button__icon-svg" />
 );
 
 const ArrowDownIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" className="button__icon-svg">
-        <path d="M12 5V19" />
-        <path d="M19 12L12 19L5 12" />
-    </svg>
+    <img src={downIcon} alt="arrow down icon" className="button__icon-svg" />
 );
 
 const Button = ({
