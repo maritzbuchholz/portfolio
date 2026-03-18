@@ -17,7 +17,7 @@ const ArrowDownIcon = () => (
 
 const Button = ({
     type = "button",
-    variant = "primary", //primary, secondary, delete
+    variant = "primary", //primary, secondary
     disabled = false,
     isLink = false,
     to,
@@ -46,9 +46,9 @@ const Button = ({
 
     if (isLink) {
         return (
-            <Link to={to} className={combinedClassName} {...props}>
+            <a href={to} className={combinedClassName} {...props}>
                 {content}
-            </Link>
+            </a>
         );
     }
 

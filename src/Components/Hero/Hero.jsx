@@ -17,8 +17,8 @@ const Hero = () => {
                     Specializing in full-stack development, system design, and clean architecture.
                 </p>
                 <div className="hero__buttons">
-                    <Button icon="envelope" variant="primary">Get in Touch</Button>
-                    <Button iconRight="arrow-down" variant="secondary">View Projects</Button>
+                    <Button icon="envelope" variant="primary" isLink={true} to="#contact">Get in Touch</Button>
+                    <Button iconRight="arrow-down" variant="secondary" isLink={true} to="#featured">View Projects</Button>
                 </div>
             </div>
         </section>
