@@ -19,27 +19,27 @@ const StackCard = ({ category, accent, items }) => (
 const Stack = () => {
     const stackDataTop = [
         {
-            category: "Languages",
+            category: "Frontend",
             accent: "red",
-            items: ["JavaScript", "Python", "Go", "Rust"]
+            items: ["JavaScript (ES6+)", "HTML5", "CSS3", "DOM", "Responsive Design"]
         },
         {
-            category: "Frontend",
+            category: "Backend",
             accent: "green",
-            items: ["React", "Next.js", "Tailwind", "Vue"]
+            items: ["Node.js", "Express.js", "RESTful Services", "MySQL"]
         }
     ];
 
     const stackDataBottom = [
         {
-            category: "Backend",
+            category: "DevOps & CI/CD",
             accent: "blue",
-            items: ["Node.js", "PostgreSQL", "Redis", "GraphQL"]
+            items: ["Git", "GitHub", "GitHub Actions", "Heroku", "Netlify"]
         },
         {
-            category: "DevOps",
+            category: "Tools & Platforms",
             accent: "gold",
-            items: ["Docker", "AWS", "CI/CD", "Terraform"]
+            items: ["Agile/Scrum", "Jira", "Code Reviews", "Version Control"]
         }
     ];
 
