@@ -23,7 +23,7 @@ const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLi
 );
 
 const Featured = () => {
-    const projects = [
+    const projectsTop = [
         {
             title: "DataForge",
             accent: "red",
@@ -40,6 +40,9 @@ const Featured = () => {
             githubLink: "#",
             externalLink: "#"
         },
+    ];
+
+const projectsBottom = [
         {
             title: "DevMetrics",
             accent: "blue",
@@ -68,9 +71,17 @@ const Featured = () => {
                 <div className="featured__divider"></div>
                 
                 <div className="featured__grid">
-                    {projects.map((project, index) => (
-                        <FeaturedCard key={index} {...project} />
-                    ))}
+                    <div className="featured__top">
+                        {projectsTop.map((project, index) => (
+                            <FeaturedCard key={index} {...project} />
+                        ))}
+                    </div>
+
+                    <div className="featured__bottom">
+                        {projectsBottom.map((project, index) => (
+                            <FeaturedCard key={index} {...project} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
