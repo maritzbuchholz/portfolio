@@ -17,7 +17,7 @@ const StackCard = ({ category, accent, items }) => (
 );
 
 const Stack = () => {
-    const stackData = [
+    const stackDataTop = [
         {
             category: "Languages",
             accent: "red",
@@ -27,7 +27,10 @@ const Stack = () => {
             category: "Frontend",
             accent: "green",
             items: ["React", "Next.js", "Tailwind", "Vue"]
-        },
+        }
+    ];
+
+    const stackDataBottom = [
         {
             category: "Backend",
             accent: "blue",
@@ -50,9 +53,16 @@ const Stack = () => {
                 <div className="stack__divider"></div>
                 
                 <div className="stack__grid">
-                    {stackData.map((data, index) => (
-                        <StackCard key={index} {...data} />
-                    ))}
+                    <div className="stack__top">
+                        {stackDataTop.map((data, index) => (
+                            <StackCard key={index} {...data} />
+                        ))}
+                    </div>
+                    <div className="stack__bottom">
+                        {stackDataBottom.map((data, index) => (
+                            <StackCard key={index} {...data} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
