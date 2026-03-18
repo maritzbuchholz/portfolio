@@ -14,7 +14,7 @@
     cursor: pointer;
 
     &--primary {
-        background-color: $accent-red;
+        background-color: $accent-blue;
         color: #FFFFFF;
         padding: 0.75rem 1.5rem;
         border-radius: 4px;
@@ -38,7 +38,7 @@
         &:hover {
             transform: translate(2px, 2px);
             box-shadow: 2px 2px 0px $text-dark;
-            background-color: darken(#A71B1B, 5%);
+            background-color: darken($accent-blue, 5%);
         }
 
         &:active {
