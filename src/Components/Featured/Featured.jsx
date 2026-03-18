@@ -25,12 +25,12 @@ const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLi
 const Featured = () => {
     const projectsTop = [
         {
-            title: "DataForge",
+            title: "MetalNome",
             accent: "red",
             description: "High-performance data pipeline framework processing 10M+ events/day with real-time analytics.",
             tags: ["Go", "Kafka", "PostgreSQL"],
-            githubLink: "#",
-            externalLink: "#"
+            githubLink: "https://met6lnome.netlify.app/",
+            externalLink: "https://github.com/maritzbuchholz/Metalnome"
         },
         {
             title: "CloudDeploy",

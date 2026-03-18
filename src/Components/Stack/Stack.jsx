@@ -39,7 +39,7 @@ const Stack = () => {
         {
             category: "Tools & Platforms",
             accent: "gold",
-            items: ["Agile/Scrum", "Jira", "Code Reviews", "Version Control"]
+            items: ["Agile/Scrum", "Jira", "npm", "pip", "Vite"]
         }
     ];
 
