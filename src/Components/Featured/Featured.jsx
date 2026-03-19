@@ -9,8 +9,8 @@ const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLi
         <div className="featured__card-header">
             <h3 className="featured__card-title">{title}</h3>
             <div className="featured__card-links">
-                {githubLink && <a href={githubLink} target="_blank" rel="noreferrer"><img src={site} alt="site icon" className="featured__card-icon" /></a>}
-                {externalLink && <a href={externalLink} target="_blank" rel="noreferrer"><img src={git} alt="git icon" className="featured__card-icon" /></a>}
+                {externalLink && <a href={externalLink} target="_blank" rel="noreferrer"><img src={site} alt="site icon" className="featured__card-icon" /></a>}
+                {githubLink && <a href={githubLink} target="_blank" rel="noreferrer"><img src={git} alt="git icon" className="featured__card-icon" /></a>}
             </div>
         </div>
         <p className="featured__card-description">{description}</p>
@@ -25,18 +25,18 @@ const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLi
 const Featured = () => {
     const projectsTop = [
         {
-            title: "MetalNome",
+            title: "Purchasing App (WIP)",
             accent: "red",
-            description: "High-performance data pipeline framework processing 10M+ events/day with real-time analytics.",
-            tags: ["Go", "Kafka", "PostgreSQL"],
-            githubLink: "https://met6lnome.netlify.app/",
-            externalLink: "https://github.com/maritzbuchholz/Metalnome"
+            description: "A purchasing app for small businesses",
+            tags: ["Stripe"],
+            githubLink: "#",
+            externalLink: "#"
         },
         {
-            title: "CloudDeploy",
+            title: "LoveBug",
             accent: "green",
-            description: "Zero-downtime deployment platform with automated rollbacks and canary releases.",
-            tags: ["TypeScript", "Docker", "AWS"],
+            description: "Team built minimal viable product of a data-driven relationship app",
+            tags: ["React", "Express.js", "MySQL", "Flask"],
             githubLink: "#",
             externalLink: "#"
         },
@@ -44,20 +44,20 @@ const Featured = () => {
 
 const projectsBottom = [
         {
-            title: "DevMetrics",
+            title: "Instock",
             accent: "blue",
-            description: "Engineering productivity dashboard tracking code quality, velocity, and team health metrics.",
-            tags: ["React", "Python", "D3.js"],
+            description: "Team built inventory management system",
+            tags: ["React", "Express.js", "MySQL"],
             githubLink: "#",
             externalLink: "#"
         },
         {
-            title: "AuthKit",
+            title: "Metalnome",
             accent: "gold",
-            description: "Open-source authentication library with OAuth2, SAML, and passwordless login support.",
-            tags: ["Rust", "Node.js", "Redis"],
-            githubLink: "#",
-            externalLink: "#"
+            description: "A metronome for metalheads with mobile functionality",
+            tags: ["Tone.js", "Web Audio API"],
+            githubLink: "https://github.com/maritzbuchholz/Metalnome",
+            externalLink: "https://met6lnome.netlify.app/"
         }
     ];
 

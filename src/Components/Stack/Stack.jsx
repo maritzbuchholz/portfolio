@@ -21,12 +21,12 @@ const Stack = () => {
         {
             category: "Frontend",
             accent: "red",
-            items: ["JavaScript (ES6+)", "HTML5", "CSS3", "DOM", "Responsive Design"]
+            items: ["JavaScript (ES6+)", "HTML5", "CSS3", "DOM", "Python"]
         },
         {
             category: "Backend",
             accent: "green",
-            items: ["Node.js", "Express.js", "RESTful Services", "MySQL"]
+            items: ["Node.js", "Express.js", "RESTful Services", "MySQL", "Flask"]
         }
     ];
 
@@ -34,12 +34,12 @@ const Stack = () => {
         {
             category: "DevOps & CI/CD",
             accent: "blue",
-            items: ["Git", "GitHub", "GitHub Actions", "Heroku", "Netlify"]
+            items: ["Git", "GitHub", "GitHub Actions", "Netlify", "Heroku"]
         },
         {
             category: "Tools & Platforms",
             accent: "gold",
-            items: ["Agile/Scrum", "Jira", "npm", "pip", "Vite"]
+            items: ["Agile/Scrum", "Jira",  "Vite", "npm", "pip"]
         }
     ];
 

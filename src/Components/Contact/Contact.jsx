@@ -10,12 +10,12 @@ const Contact = () => {
             <div className="contact__content">
                 <h2 className="contact__title">
                     <span className="contact__title-first">Let's</span>
-                    <span className="contact__title-last">Talk</span>
+                    <span className="contact__title-last">Chat!</span>
                 </h2>
                 <div className="contact__divider"></div>
                 
                 <p className="contact__description">
-                    Have a project in mind or want to collaborate? I'm always open to discussing new opportunities and interesting challenges.
+                    Please feel free to reach out with any interesting challenges or new opportunities
                 </p>
                 
                 <div className="contact__info">

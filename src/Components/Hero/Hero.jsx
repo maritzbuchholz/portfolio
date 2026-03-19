@@ -12,8 +12,7 @@ const Hero = () => {
                 </h1>
                 <div className="hero__divider"></div>
                 <p className="hero__description">
-                    Building robust, scalable software with precision and craft.<br/>
-                    Specializing in full-stack development, system design, and clean architecture.
+                    Creative problem solver with a background in finance and a passion for building.
                 </p>
                 <div className="hero__buttons">
                     <Button icon="envelope" variant="primary" isLink={true} to="#contact">Get in Touch</Button>

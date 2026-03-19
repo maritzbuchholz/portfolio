@@ -11,10 +11,10 @@ const About = () => {
                 </h2>
                 <div className="about__divider"></div>
                 <p className="about__description">
-                    I'm a software engineer who believes in writing code that lasts. With deep experience in distributed systems, web platforms, and developer tooling, I bring both technical rigor and creative problem-solving to every project.
+                    I am a full-stack engineer who strives to write robust and efficient code. With a background in finance and math, I approach every project with analytical rigor and a commercial mindset.
                 </p>
                 <p className="about__description">
-                    When I'm not coding, you'll find me contributing to open-source projects, mentoring junior developers, or exploring the intersection of design and engineering.
+                    When I'm not coding, you'll find me playing the drums, watching baseball, or day trading my personal account!
                 </p>
             </div>
         </section>
