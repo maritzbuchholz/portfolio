@@ -37,14 +37,14 @@ const Featured = () => {
             accent: "green",
             description: "Team built minimal viable product of a data-driven relationship app",
             tags: ["React", "Express.js", "MySQL", "Flask"],
-            githubLink: "#",
-            externalLink: "#"
+            githubLink: "https://github.com/maritzbuchholz/LoveBug",
+            externalLink: "https://lovebug26.netlify.app/"
         },
     ];
 
 const projectsBottom = [
         {
-            title: "Instock",
+            title: "Instock (WIP)",
             accent: "blue",
             description: "Team built inventory management system",
             tags: ["React", "Express.js", "MySQL"],
