@@ -48,7 +48,7 @@ const projectsBottom = [
             accent: "blue",
             description: "Team built inventory management system",
             tags: ["React", "Express.js", "MySQL"],
-            githubLink: "#",
+            githubLink: "https://github.com/maritzbuchholz/Instock",
             externalLink: "#"
         },
         {
