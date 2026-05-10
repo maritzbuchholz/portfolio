@@ -33,12 +33,12 @@ const Featured = () => {
             externalLink: "#"
         },
         {
-            title: "LoveBug",
+            title: "Metalnome",
             accent: "green",
-            description: "Team built minimal viable product of a data-driven relationship app",
-            tags: ["React", "Express.js", "MySQL", "Flask"],
-            githubLink: "https://github.com/maritzbuchholz/lovebug-client",
-            externalLink: "https://lovebug26.netlify.app/"
+            description: "A metronome for metalheads with mobile functionality",
+            tags: ["Tone.js", "Web Audio API"],
+            githubLink: "https://github.com/maritzbuchholz/Metalnome",
+            externalLink: "https://met6lnome.netlify.app/"
         },
     ];
 
@@ -52,12 +52,12 @@ const projectsBottom = [
             externalLink: "https://instock-maritz.netlify.app/"
         },
         {
-            title: "Metalnome",
+            title: "LoveBug",
             accent: "gold",
-            description: "A metronome for metalheads with mobile functionality",
-            tags: ["Tone.js", "Web Audio API"],
-            githubLink: "https://github.com/maritzbuchholz/Metalnome",
-            externalLink: "https://met6lnome.netlify.app/"
+            description: "Front-end wireframe of relationship app",
+            tags: ["React", "Javacript", "Antigravity"],
+            githubLink: "https://github.com/maritzbuchholz/lovebug-client",
+            externalLink: "https://lovebug26.netlify.app/"
         }
     ];
 
