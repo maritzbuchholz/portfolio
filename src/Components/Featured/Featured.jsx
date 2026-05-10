@@ -44,12 +44,12 @@ const Featured = () => {
 
 const projectsBottom = [
         {
-            title: "Instock (WIP)",
+            title: "Instock",
             accent: "blue",
             description: "Team built inventory management system",
-            tags: ["React", "Express.js", "MySQL"],
+            tags: ["React", "Express.js", "MySQL", "Heroku"],
             githubLink: "https://github.com/maritzbuchholz/instock-client",
-            externalLink: "#"
+            externalLink: "https://instock-maritz.netlify.app/"
         },
         {
             title: "Metalnome",
