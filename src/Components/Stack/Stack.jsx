@@ -19,14 +19,14 @@ const StackCard = ({ category, accent, items }) => (
 const Stack = () => {
     const stackDataTop = [
         {
-            category: "Frontend",
+            category: "Languages",
             accent: "red",
-            items: ["JavaScript (ES6+)", "HTML5", "CSS3", "DOM", "Python"]
+            items: ["JavaScript (ES6+)", "HTML5", "CSS3", "Python"]
         },
         {
             category: "Backend",
             accent: "green",
-            items: ["Node.js", "Express.js", "RESTful Services", "MySQL", "Flask"]
+            items: ["Node.js", "Express.js", "RESTful Services", "MySQL", "APIs"]
         }
     ];
 
@@ -39,7 +39,7 @@ const Stack = () => {
         {
             category: "Tools & Platforms",
             accent: "gold",
-            items: ["Agile/Scrum", "Jira",  "Vite", "npm", "pip"]
+            items: ["Agile/Scrum", "Jira",  "Vite", "npm"]
         }
     ];
 

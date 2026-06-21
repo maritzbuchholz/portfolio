@@ -11,10 +11,10 @@ const About = () => {
                 </h2>
                 <div className="about__divider"></div>
                 <p className="about__description">
-                    I am a full-stack engineer who strives to write robust and efficient code. With a background in finance and math, I approach every project with analytical rigor and a commercial mindset.
+                    I am a backend engineer who strives to write robust and efficient code. With a background in finance and math, I approach every project with analytical rigor and a commercial mindset.
                 </p>
                 <p className="about__description">
-                    When I'm not coding, you'll find me playing the drums, watching baseball, or vibe trading my personal account!
+                    When I'm not coding, you'll find me playing either playing the drum or watching reality TV and the Mets!
                 </p>
             </div>
         </section>
