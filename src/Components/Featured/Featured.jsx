@@ -25,9 +25,9 @@ const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLi
 const Featured = () => {
     const projectsTop = [
         {
-            title: "Purchasing App (WIP)",
+            title: "Stare",
             accent: "red",
-            description: "A purchasing app for small businesses",
+            description: "A band website with merchant capabilities",
             tags: ["Stripe"],
             githubLink: "#",
             externalLink: "#"
