@@ -25,7 +25,7 @@ const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLi
 const Featured = () => {
     const projectsTop = [
         {
-            title: "Stare",
+            title: "Stare (WIP)",
             accent: "red",
             description: "A band website with merchant capabilities",
             tags: ["Stripe"],
@@ -33,23 +33,24 @@ const Featured = () => {
             externalLink: "#"
         },
         {
-            title: "Metalnome",
-            accent: "green",
-            description: "A metronome for metalheads with mobile functionality",
-            tags: ["Tone.js", "Web Audio API"],
-            githubLink: "https://github.com/maritzbuchholz/Metalnome",
-            externalLink: "https://met6lnome.netlify.app/"
-        },
-    ];
-
-const projectsBottom = [
-        {
             title: "Instock",
             accent: "blue",
             description: "Team built inventory management system",
             tags: ["React", "Express.js", "MySQL", "Heroku"],
             githubLink: "https://github.com/maritzbuchholz/instock-client",
             externalLink: "https://instock-maritz.netlify.app/"
+        },
+
+    ];
+
+const projectsBottom = [
+        {
+            title: "Metalnome",
+            accent: "green",
+            description: "A metronome for metalheads with mobile functionality",
+            tags: ["Tone.js", "Web Audio API"],
+            githubLink: "https://github.com/maritzbuchholz/Metalnome",
+            externalLink: "https://met6lnome.netlify.app/"
         },
         {
             title: "LoveBug",
