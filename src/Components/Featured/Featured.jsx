@@ -40,10 +40,17 @@ const Featured = () => {
             githubLink: "https://github.com/maritzbuchholz/instock-client",
             externalLink: "https://instock-maritz.netlify.app/"
         },
-
     ];
 
 const projectsBottom = [
+        {
+            title: "LoveBug",
+            accent: "gold",
+            description: "Front-end wireframe of relationship app",
+            tags: ["React", "Javacript", "Antigravity"],
+            githubLink: "https://github.com/maritzbuchholz/lovebug-client",
+            externalLink: "https://lovebug26.netlify.app/"
+        },
         {
             title: "Metalnome",
             accent: "green",
@@ -52,14 +59,6 @@ const projectsBottom = [
             githubLink: "https://github.com/maritzbuchholz/Metalnome",
             externalLink: "https://met6lnome.netlify.app/"
         },
-        {
-            title: "LoveBug",
-            accent: "gold",
-            description: "Front-end wireframe of relationship app",
-            tags: ["React", "Javacript", "Antigravity"],
-            githubLink: "https://github.com/maritzbuchholz/lovebug-client",
-            externalLink: "https://lovebug26.netlify.app/"
-        }
     ];
 
     return (
