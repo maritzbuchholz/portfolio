@@ -24,14 +24,14 @@ const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLi
 
 const Featured = () => {
     const projectsTop = [
-        {
-            title: "Stare (WIP)",
-            accent: "red",
-            description: "A band website with merchant capabilities",
-            tags: ["Stripe"],
-            githubLink: "#",
-            externalLink: "#"
-        },
+        // {
+        //     title: "Stare (WIP)",
+        //     accent: "red",
+        //     description: "A band website with merchant capabilities",
+        //     tags: ["Stripe"],
+        //     githubLink: "#",
+        //     externalLink: "#"
+        // },
         {
             title: "Instock",
             accent: "blue",
