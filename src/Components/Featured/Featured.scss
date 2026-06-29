@@ -41,20 +41,10 @@
     }
 
     &__grid {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         width: 100%;
-    }
-
-    &__top, &__bottom {
-        display: flex;
-        gap: 2rem;
-        width: 100%;
-        
-        > * {
-            flex: 1;
-        }
     }
 
     &__card {
@@ -139,7 +129,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .featured {
         padding: 4rem 1rem;
         
@@ -148,14 +138,7 @@
         }
 
         &__grid {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__top, &__bottom {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+            grid-template-columns: 1fr;
         }
 
         &__card {

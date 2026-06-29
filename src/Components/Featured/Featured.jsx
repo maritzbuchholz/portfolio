@@ -23,7 +23,7 @@ const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLi
 );
 
 const Featured = () => {
-    const projectsTop = [
+    const projects = [
         // {
         //     title: "Stare (WIP)",
         //     accent: "red",
@@ -40,9 +40,6 @@ const Featured = () => {
             githubLink: "https://github.com/maritzbuchholz/instock-client",
             externalLink: "https://instock-maritz.netlify.app/"
         },
-    ];
-
-const projectsBottom = [
         {
             title: "LoveBug",
             accent: "gold",
@@ -71,17 +68,9 @@ const projectsBottom = [
                 <div className="featured__divider"></div>
                 
                 <div className="featured__grid">
-                    <div className="featured__top">
-                        {projectsTop.map((project, index) => (
-                            <FeaturedCard key={index} {...project} />
-                        ))}
-                    </div>
-
-                    <div className="featured__bottom">
-                        {projectsBottom.map((project, index) => (
-                            <FeaturedCard key={index} {...project} />
-                        ))}
-                    </div>
+                    {projects.map((project, index) => (
+                        <FeaturedCard key={index} {...project} />
+                    ))}
                 </div>
             </div>
         </section>
