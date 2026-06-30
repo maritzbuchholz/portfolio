@@ -14,7 +14,7 @@ const About = () => {
                     I am a backend engineer who strives to write robust and efficient code. With a background in finance and math, I approach every project with analytical rigor and a commercial mindset.
                 </p>
                 <p className="about__description">
-                    When I'm not coding, you'll find me playing either playing the drum or watching reality TV and the Mets!
+                    When I'm not coding, you'll find me playing either playing the drum, watching reality TV, or rooting for the Mets!
                 </p>
             </div>
         </section>
