@@ -26,7 +26,7 @@ const Stack = () => {
         {
             category: "Backend",
             accent: "green",
-            items: ["Node.js", "Express.js", "RESTful Services", "MySQL", "APIs"]
+            items: ["Node.js", "Express.js", "RESTful APIs", "MySQL"]
         }
     ];
 
@@ -39,7 +39,7 @@ const Stack = () => {
         {
             category: "Tools & Platforms",
             accent: "gold",
-            items: ["Agile/Scrum", "Jira",  "Vite", "npm"]
+            items: ["Agile/Scrum", "Jira",  "Vite", "npm", "Antigavity", "Claude Code"]
         }
     ];
 
