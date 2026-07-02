@@ -12,7 +12,7 @@ const Hero = () => {
                 </h1>
                 <div className="hero__divider"></div>
                 <p className="hero__description">
-                    Creative problem solver with a background in finance and a passion for building.
+                    Creative problem solver with a background in finance and a passion for building
                 </p>
                 <div className="hero__buttons">
                     <Button icon="envelope" variant="primary" isLink={true} to="#contact">Get in Touch</Button>
