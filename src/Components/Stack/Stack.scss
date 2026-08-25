@@ -5,7 +5,7 @@
     padding: 6rem 2rem;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid $accent-gold;
+    border-bottom: 1px solid $accent-red;
 
     &__content {
         width: 90%;
@@ -77,9 +77,9 @@
             margin-bottom: 1rem;
 
             &--red { background: linear-gradient(90deg, rgba($accent-red, 1) 0%, rgba($accent-red, 0) 100%); }
-            &--green { background: linear-gradient(90deg, rgba($accent-green, 1) 0%, rgba($accent-green, 0) 100%); }
-            &--blue { background: linear-gradient(90deg, rgba($accent-blue, 1) 0%, rgba($accent-blue, 0) 100%); }
-            &--gold { background: linear-gradient(90deg, rgba($accent-gold, 1) 0%, rgba($accent-gold, 0) 100%); }
+            &--green { background: linear-gradient(90deg, rgba($accent-red, 1) 0%, rgba($accent-red, 0) 100%); }
+            &--blue { background: linear-gradient(90deg, rgba($accent-red, 1) 0%, rgba($accent-red, 0) 100%); }
+            &--gold { background: linear-gradient(90deg, rgba($accent-red, 1) 0%, rgba($accent-red, 0) 100%); }
         }
 
         &-title {

@@ -5,7 +5,7 @@
     padding: 6rem 2rem;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid $accent-gold;
+    border-bottom: 1px solid $accent-red;
 
     &__content {
         width: 90%;
@@ -37,7 +37,7 @@
         max-width: 140px;
         height: 2px;
         margin: 1.5rem 0 4rem 0;
-        background: linear-gradient(90deg, rgba($accent-green, 1) 0%, rgba($accent-green, 0) 100%);
+        background: linear-gradient(90deg, rgba($accent-red, 1) 0%, rgba($accent-red, 0) 100%);
     }
 
     &__grid {
@@ -63,9 +63,9 @@
         }
 
         &--red { border-top-color: $accent-red; }
-        &--green { border-top-color: $accent-green; }
-        &--blue { border-top-color: $accent-blue; }
-        &--gold { border-top-color: $accent-gold; }
+        &--green { border-top-color: $accent-red; }
+        &--blue { border-top-color: $accent-red; }
+        &--gold { border-top-color: $accent-red; }
 
         &-header {
             display: flex;
