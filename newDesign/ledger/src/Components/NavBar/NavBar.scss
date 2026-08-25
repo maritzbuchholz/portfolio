@@ -1,8 +1,6 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
-// The nav is the ledger page header: brand, index, and the stamp
-// that says which book you are reading.
 .nav {
   position: sticky;
   top: 0;
@@ -31,6 +29,8 @@
   &__links {
     display: flex;
     gap: 26px;
+
+    @include below($bp-md) { display: none; }
   }
 
   &__link {
@@ -43,30 +43,6 @@
     &:hover {
       color: $red;
       border-bottom-color: $red;
-    }
-  }
-
-  // Narrow screens drop the stamp rather than the index — losing the
-  // links entirely would leave a one-page site with no way to move.
-  @include below($bp-md) {
-    &__stamp { display: none; }
-
-    &__links { gap: 18px; }
-  }
-
-  @include below($bp-sm) {
-    &__inner {
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 12px 0;
-    }
-
-    &__brand { flex: 1 0 100%; }
-
-    &__links {
-      flex: 1 0 100%;
-      justify-content: space-between;
-      gap: 12px;
     }
   }
 }
