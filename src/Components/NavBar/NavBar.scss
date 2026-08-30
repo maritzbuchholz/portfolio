@@ -78,6 +78,12 @@
       color: $red;
       border-bottom-color: $red;
     }
+
+    // Marks the section currently under the header.
+    &--active {
+      color: $red;
+      border-bottom-color: $red;
+    }
   }
 
   // Narrow screens drop the stamp rather than the index — losing the
