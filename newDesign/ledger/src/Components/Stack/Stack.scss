@@ -36,31 +36,21 @@
     @include display(16px, 600, .02em);
   }
 
-  // Laid out as a wrapping flex row. The entries render with no whitespace
-  // between them and the separator sits inside each entry's nowrap box, so
-  // inline text would have no break opportunity and the row would overflow.
   &__items {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    column-gap: .45em;
-    min-width: 0;
     font-family: $ff-mono;
     font-size: $fs-small;
     color: $ink-soft;
     line-height: 1.9;
 
-    // An entry never breaks mid-name; the list breaks between entries.
     span {
       white-space: nowrap;
 
       &::after {
-        content: '·';
-        margin-left: .45em;
+        content: ' · ';
         color: $rule-hair;
       }
 
-      &:last-child::after { content: none; }
+      &:last-child::after { content: ''; }
     }
   }
 

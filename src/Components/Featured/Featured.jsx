@@ -1,79 +1,90 @@
-import React from 'react';
-import git from '../../assets/git.svg';
-import site from '../../assets/site.svg';
+import Section from '../Section/Section';
 import './Featured.scss';
 
-
-const FeaturedCard = ({ title, description, tags, accent, githubLink, externalLink }) => (
-    <div className={`featured__card featured__card--${accent}`}>
-        <div className="featured__card-header">
-            <h3 className="featured__card-title">{title}</h3>
-            <div className="featured__card-links">
-                {externalLink && <a href={externalLink} target="_blank" rel="noreferrer"><img src={site} alt="site icon" className="featured__card-icon" /></a>}
-                {githubLink && <a href={githubLink} target="_blank" rel="noreferrer"><img src={git} alt="git icon" className="featured__card-icon" /></a>}
-            </div>
-        </div>
-        <p className="featured__card-description">{description}</p>
-        <div className="featured__card-tags">
-            {tags.map((tag, index) => (
-                <span key={index} className="featured__card-tag">{tag}</span>
-            ))}
-        </div>
-    </div>
-);
+const PROJECTS = [
+    // {
+    //     ref: "000",
+    //     name: "Stare (WIP)",
+    //     description: "A band website with merchant capabilities",
+    //     stack: ["Stripe"],
+    //     repo: "#",
+    //     live: "#"
+    // },
+    {
+        ref: "001",
+        name: "Instock",
+        description: "Team built inventory management system",
+        stack: ["React", "Express.js", "MySQL", "Heroku"],
+        repo: "https://github.com/maritzbuchholz/instock-client",
+        live: "https://instock-maritz.netlify.app/"
+    },
+    {
+        ref: "002",
+        name: "LoveBug",
+        description: "Front-end wireframe of relationship app",
+        stack: ["React", "JavaScript", "Antigravity"],
+        repo: "https://github.com/maritzbuchholz/lovebug-client",
+        live: "https://lovebug26.netlify.app/"
+    },
+    {
+        ref: "003",
+        name: "Metalnome",
+        description: "A metronome for metalheads with mobile functionality",
+        stack: ["Tone.js", "Web Audio API"],
+        repo: "https://github.com/maritzbuchholz/Metalnome",
+        live: "https://met6lnome.netlify.app/"
+    },
+];
 
 const Featured = () => {
-    const projects = [
-        // {
-        //     title: "Stare (WIP)",
-        //     accent: "red",
-        //     description: "A band website with merchant capabilities",
-        //     tags: ["Stripe"],
-        //     githubLink: "#",
-        //     externalLink: "#"
-        // },
-        {
-            title: "Instock",
-            accent: "blue",
-            description: "Team built inventory management system",
-            tags: ["React", "Express.js", "MySQL", "Heroku"],
-            githubLink: "https://github.com/maritzbuchholz/instock-client",
-            externalLink: "https://instock-maritz.netlify.app/"
-        },
-        {
-            title: "LoveBug",
-            accent: "gold",
-            description: "Front-end wireframe of relationship app",
-            tags: ["React", "Javacript", "Antigravity"],
-            githubLink: "https://github.com/maritzbuchholz/lovebug-client",
-            externalLink: "https://lovebug26.netlify.app/"
-        },
-        {
-            title: "Metalnome",
-            accent: "green",
-            description: "A metronome for metalheads with mobile functionality",
-            tags: ["Tone.js", "Web Audio API"],
-            githubLink: "https://github.com/maritzbuchholz/Metalnome",
-            externalLink: "https://met6lnome.netlify.app/"
-        },
-    ];
-
     return (
-        <section id="featured" className="featured">
-            <div className="featured__content">
-                <h2 className="featured__title">
-                    <span className="featured__title-first">Featured</span>
-                    <span className="featured__title-last">Work</span>
-                </h2>
-                <div className="featured__divider"></div>
-                
-                <div className="featured__grid">
-                    {projects.map((project, index) => (
-                        <FeaturedCard key={index} {...project} />
-                    ))}
-                </div>
+        <Section
+            id="work"
+            number="03"
+            label={`PROJECTS`}
+            title={<>Featured <em>work</em></>}
+        >
+            <div className="entries">
+                {PROJECTS.map((project) => (
+                    <article className="entry" key={project.ref}>
+                        <span className="meta entry__ref">Prj&mdash;{project.ref}</span>
+                        <div>
+                            <div className="entry__top">
+                                <h3 className="entry__name">{project.name}</h3>
+                                <span className="entry__links">
+                                    {project.live && (
+                                        <a
+                                            className="entry__link"
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            aria-label={`${project.name} — live site`}
+                                        >
+                                            Live
+                                        </a>
+                                    )}
+                                    {project.repo && (
+                                        <a
+                                            className="entry__link"
+                                            href={project.repo}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            aria-label={`${project.name} — repository`}
+                                        >
+                                            Repo
+                                        </a>
+                                    )}
+                                </span>
+                            </div>
+                            <p className="entry__desc">{project.description}</p>
+                            <ul className="entry__stack">
+                                {project.stack.map((tag) => <li key={tag}>{tag}</li>)}
+                            </ul>
+                        </div>
+                    </article>
+                ))}
             </div>
-        </section>
+        </Section>
     );
 };
 

@@ -1,23 +1,28 @@
-import React from 'react';
 import './NavBar.scss';
+
+const LINKS = [
+    { href: '#about', label: 'About' },
+    { href: '#stack', label: 'Stack' },
+    { href: '#work', label: 'Work' },
+    { href: '#contact', label: 'Contact' },
+];
 
 const NavBar = () => {
     return (
-        <nav className="nav-bar">
-            <div className="nav-bar__logo">
-                <a className='nav-bar__logo-link' href="#">
-                    <span className="nav-bar__logo-first">R</span>
-                    <span className="nav-bar__logo-last">it</span>
-                    <span className="nav-bar__logo-first">z</span>
+        <header className="nav">
+            <div className="nav__inner">
+                <a className="nav__brand" href="#top">
+                    Maritz<em>&nbsp;/&nbsp;</em>Buchholz
                 </a>
+
+                <nav className="nav__links">
+                    {LINKS.map((link) => (
+                        <a className="nav__link" key={link.href} href={link.href}>{link.label}</a>
+                    ))}
+                </nav>
+                
             </div>
-            <div className="nav-bar__links">
-                <a className='nav-bar__link' href="#about">ABOUT</a>
-                <a className='nav-bar__link' href="#skills">SKILLS</a>
-                <a className='nav-bar__link' href="#featured">PROJECTS</a>
-                <a className='nav-bar__link' href="#contact">CONTACT</a>
-            </div>
-        </nav>
+        </header>
     );
 };
 

@@ -1,93 +1,140 @@
-@use "../../styles/variables" as *;
-@use "../../styles/functions" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .hero {
-    background-color: $card-bg;
-    background-image: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 4px,
-        rgba(0,0,0,0.03) 4px,
-        rgba(0,0,0,0.03) 5px
-    );
-    padding: 6rem 2rem;
+  padding: $hero-pad 0 0;
+
+  &__inner { @include wrap; }
+
+  &__eyebrow {
+    @include meta;
+    color: $red;
+    letter-spacing: .24em;
+    margin: 0 0 20px;
+  }
+
+  &__name {
+    @include display($fs-display, 700, $ls-display);
+    line-height: .92;
+    margin: 0;
+
+    // "Buchholz" is one unbreakable word and sets the width of the block.
+    // $fs-display bottoms out at a fixed 3rem, which is wider than the
+    // column below ~320px, so on narrow screens let it fall past that
+    // floor. 15vw only undercuts 3rem below 320px — every width above
+    // that keeps the display size untouched.
+    @include below($bp-sm) {
+      font-size: min(#{$fs-display}, 15vw);
+    }
+
+    span {
+      display: block;
+      color: $red;
+    }
+  }
+
+  &__sub {
+    max-width: 46ch;
+    margin: 26px 0 0;
+    font-size: $fs-lead;
+    line-height: 1.55;
+    color: $ink-soft;
+  }
+
+  &__actions {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-bottom: 1px solid $accent-gold;
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-    }
-
-    &__subtitle {
-        font-family: $font-family-secondary;
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.4em;
-        color: $text-muted;
-        text-transform: uppercase;
-        margin-bottom: 2rem;
-    }
-
-    &__title {
-        font-family: $font-family-primary;
-        font-size: 7rem;
-        line-height: 0.85;
-        margin: 0;
-        font-weight: 900;
-        letter-spacing: -0.02em;
-
-        &-first {
-            color: $text-dark;
-            margin-right: -0.05em; /* Optical adjustment for Playfair */
-        }
-
-        &-last {
-            color: $accent-red;
-        }
-    }
-
-    &__divider {
-        width: 90%;
-        height: 2px;
-        margin: 2.5rem 0;
-        background: linear-gradient(90deg, rgba($accent-gold, 0) 0%, rgba($accent-gold, 1) 50%, rgba($accent-gold, 0) 100%);
-    }
-
-    &__description {
-        font-family: $font-family-secondary;
-        font-size: 1.15rem;
-        color: $text-muted;
-        line-height: 1.6;
-        width: 100%;
-        margin-bottom: 2.5rem;
-    }
-
-    &__buttons {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: center;
-    }
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+  }
 }
 
-@media (max-width: 768px) {
-    .hero {
-        padding: 4rem 1rem;
-        
-        &__title {
-            font-size: 4.5rem;
-        }
-        
-        &__buttons {
-            flex-direction: column;
-            width: 100%;
-            max-width: 300px;
-        }
+// ============================================================
+//  SIGNATURE — the double-entry balance.
+//  Finance on the left, engineering on the right, ruled and
+//  banded like continuous-form paper. This is the one element
+//  the page is meant to be remembered by; everything else stays
+//  quiet so it can carry the weight.
+// ============================================================
+.balance {
+  margin-top: clamp(44px, 7vw, 72px);
+
+  // Both columns share one grid, so an engineering row always lines up
+  // with the finance row it balances no matter which side runs longer.
+  &__cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  // The column exists to group a side for narrow screens. On wide ones it
+  // dissolves and its cells sit directly on the shared grid above.
+  &__col {
+    display: contents;
+
+    > * { border-bottom: 1px solid $rule-hair; }
+
+    // Header takes row 1, then one row per entry.
+    @for $i from 1 through 8 {
+      > *:nth-child(#{$i}) { grid-row: $i; }
     }
+
+    // Green-bar banding on alternate entries — the header is row 1, so the
+    // banded entries are the odd-numbered children after it.
+    > *:nth-child(odd):not(:first-child) { background: $stock-band; }
+
+    &--eng > * { grid-column: 1; }
+
+    &--fin > * {
+      grid-column: 2;
+      border-left: 1px solid $rule-hair;
+    }
+  }
+
+  &__head {
+    @include meta;
+    padding: 11px 16px;
+    color: $red;   // both sides of the balance head carry the oxblood accent
+  }
+
+  &__cell { padding: 15px 16px; }
+
+  // Narrow screens stack the two sides as separate blocks, each opening
+  // with its own heavy rule.
+  @include below($bp-md) {
+    &__cols { display: block; }
+
+    &__col {
+      display: block;
+
+      &--fin {
+        margin-top: 28px;
+        border-top: 2px solid $rule-ink;
+
+        > * { border-left: 0; }
+      }
+    }
+  }
+
+  &__entry {
+    @include display(16px, 600, -.005em);
+    text-transform: none;
+  }
+
+  &__note {
+    @include meta;
+    display: block;
+    margin-top: 4px;
+  }
+
+  &__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 13px 16px;
+    background: $stock-sunk;
+    border-bottom: 2px solid $rule-ink;
+
+    .meta { color: $red; }
+  }
 }

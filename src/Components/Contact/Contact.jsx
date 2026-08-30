@@ -1,39 +1,62 @@
-import React from 'react';
+import Section from '../Section/Section';
+import Button from '../Button/Button';
 import './Contact.scss';
-import mailRed from '../../assets/mail-red.svg';
-import linkedIn from '../../assets/linked.svg';
-import gitBlue from '../../assets/gitblue.svg';
+
+const CHANNELS = [
+    {
+        label: 'Email',
+        value: 'maritzbuchholz@gmail.com',
+        href: 'mailto:maritzbuchholz@gmail.com',
+        external: false
+    },
+    {
+        label: 'LinkedIn',
+        value: 'linkedin.com/in/maritzbuchholz/',
+        href: 'https://www.linkedin.com/in/maritzbuchholz/',
+        external: true
+    },
+    {
+        label: 'GitHub',
+        value: 'github.com/maritzbuchholz/',
+        href: 'https://github.com/maritzbuchholz/',
+        external: true
+    },
+];
 
 const Contact = () => {
     return (
-        <section id="contact" className="contact">
-            <div className="contact__content">
-                <h2 className="contact__title">
-                    <span className="contact__title-first">Let's</span>
-                    <span className="contact__title-last">Chat!</span>
-                </h2>
-                <div className="contact__divider"></div>
-                
-                <p className="contact__description">
+        <Section
+            id="contact"
+            number="04"
+            label="Contact"
+            title={<>Contact <em>Me</em></>}
+        >
+            <div className="contact">
+                <p className="contact__lead">
                     Please feel free to reach out with any interesting challenges or new opportunities
                 </p>
-                
-                <div className="contact__info">
-                    <a href="mailto:maritzbuchholz@gmail.com" target="_blank" rel="noreferrer" className="contact__info-item">
-                        <img src={mailRed} alt="mail icon" className="contact__icon" />
-                        <span>maritzbuchholz@gmail.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/maritzbuchholz/" target="_blank" rel="noreferrer" className="contact__info-item">
-                        <img src={linkedIn} alt="linkedin icon" className="contact__icon" />
-                        <span>linkedin.com/in/maritzbuchholz/</span>
-                    </a>
-                    <a href="https://github.com/maritzbuchholz/" target="_blank" rel="noreferrer" className="contact__info-item">
-                        <img src={gitBlue} alt="github icon" className="contact__icon" />
-                        <span>github.com/maritzbuchholz/</span>
-                    </a>
+
+                <div className="contact__table">
+                    {CHANNELS.map((channel) => (
+                        <a
+                            className="contact__row"
+                            key={channel.label}
+                            href={channel.href}
+                            {...(channel.external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                        >
+                            <span className="meta">{channel.label}</span>
+                            <span className="contact__val">{channel.value}</span>
+                        </a>
+                    ))}
+                </div>
+
+                <div className="contact__cta">
+                    <Button variant="solid" isLink={true} to="mailto:maritzbuchholz@gmail.com">
+                        Send an Email
+                    </Button>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 };
 

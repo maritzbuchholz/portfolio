@@ -1,0 +1,111 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.hero {
+  padding: $hero-pad 0 0;
+
+  &__inner { @include wrap; }
+
+  &__eyebrow {
+    @include meta;
+    color: $red;
+    letter-spacing: .24em;
+    margin: 0 0 20px;
+  }
+
+  &__name {
+    @include display($fs-display, 700, $ls-display);
+    line-height: .92;
+    margin: 0;
+
+    span {
+      display: block;
+      color: $red;
+    }
+  }
+
+  &__sub {
+    max-width: 46ch;
+    margin: 26px 0 0;
+    font-size: $fs-lead;
+    line-height: 1.55;
+    color: $ink-soft;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+  }
+}
+
+// ============================================================
+//  SIGNATURE — the double-entry balance.
+//  Finance on the left, engineering on the right, ruled and
+//  banded like continuous-form paper. This is the one element
+//  the page is meant to be remembered by; everything else stays
+//  quiet so it can carry the weight.
+// ============================================================
+.balance {
+  margin-top: clamp(44px, 7vw, 72px);
+
+  &__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid $rule-hair;
+
+    div { padding: 11px 16px; }
+
+    div + div {
+      border-left: 1px solid $rule-hair;
+      color: $red;
+    }
+
+    @include below($bp-md) { display: none; }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid $rule-hair;
+
+    &:nth-child(even) { background: $stock-band; }
+
+    > div { padding: 15px 16px; }
+
+    > div + div { border-left: 1px solid $rule-hair; }
+
+    @include below($bp-md) {
+      grid-template-columns: 1fr;
+
+      > div + div {
+        border-left: 0;
+        border-top: 1px solid $rule-hair;
+      }
+    }
+  }
+
+  &__entry {
+    @include display(16px, 600, -.005em);
+    text-transform: none;
+  }
+
+  &__note {
+    @include meta;
+    display: block;
+    margin-top: 4px;
+  }
+
+  &__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 13px 16px;
+    background: $stock-sunk;
+    border-bottom: 2px solid $rule-ink;
+
+    .meta { color: $red; }
+  }
+}
