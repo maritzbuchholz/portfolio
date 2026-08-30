@@ -30,12 +30,12 @@ const Hero = () => {
                 </h1>
 
                 <p className="hero__sub">
-                    Creative problem solver with over a decade of experience in institutional finance
+                    Combining +10 years of Vice President-level financial systems authority with modern backend development
                 </p>
 
                 <div className="hero__actions">
-                    <Button variant="solid" isLink={true} to="#contact">Get in Touch</Button>
-                    <Button variant="ghost" isLink={true} to="#work">View Projects</Button>
+                    <Button variant="solid" isLink={true} to="#contact">Contact</Button>
+                    <Button variant="ghost" isLink={true} to="#work">Projects</Button>
                 </div>
 
                 {/* SIGNATURE — double-entry balance */}

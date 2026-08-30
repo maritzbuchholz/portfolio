@@ -29,7 +29,7 @@ const Contact = () => {
             id="contact"
             folio="04"
             label="Contact"
-            title={<>Let's <em>talk</em></>}
+            title={<>Contact <em>Me</em></>}
         >
             <div className="contact">
                 <p className="contact__lead">
