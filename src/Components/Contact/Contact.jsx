@@ -1,5 +1,6 @@
 import Section from '../Section/Section';
 import Button from '../Button/Button';
+import resume from '../../assets/Maritz Buchholz - Resume.pdf';
 import './Contact.scss';
 
 const CHANNELS = [
@@ -52,7 +53,11 @@ const Contact = () => {
 
                 <div className="contact__cta">
                     <Button variant="solid" isLink={true} to="mailto:maritzbuchholz@gmail.com">
-                        Send an Email
+                        Email
+                    </Button>
+                    {/* download names the saved file, since Vite fingerprints the asset. */}
+                    <Button variant="ghost" isLink={true} to={resume} download="Maritz Buchholz - Resume.pdf">
+                        Resume
                     </Button>
                 </div>
             </div>

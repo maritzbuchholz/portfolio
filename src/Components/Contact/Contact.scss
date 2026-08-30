@@ -57,5 +57,11 @@
     transition: color .15s ease;
   }
 
-  &__cta { margin-top: 28px; }
+  // Same solid + ghost pairing as .hero__actions.
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
 }
