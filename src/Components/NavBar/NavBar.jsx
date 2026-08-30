@@ -20,8 +20,7 @@ const NavBar = () => {
                         <a className="nav__link" key={link.href} href={link.href}>{link.label}</a>
                     ))}
                 </nav>
-
-                <span className="meta nav__stamp">Portfolio &mdash; 2026</span>
+                
             </div>
         </header>
     );
