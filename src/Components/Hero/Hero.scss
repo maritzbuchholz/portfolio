@@ -50,38 +50,58 @@
 .balance {
   margin-top: clamp(44px, 7vw, 72px);
 
-  &__head {
+  // Both columns share one grid, so an engineering row always lines up
+  // with the finance row it balances no matter which side runs longer.
+  &__cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-bottom: 1px solid $rule-hair;
-
-    div { padding: 11px 16px; }
-
-    div + div {
-      border-left: 1px solid $rule-hair;
-      color: $red;
-    }
-
-    @include below($bp-md) { display: none; }
   }
 
-  &__row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-bottom: 1px solid $rule-hair;
+  // The column exists to group a side for narrow screens. On wide ones it
+  // dissolves and its cells sit directly on the shared grid above.
+  &__col {
+    display: contents;
 
-    &:nth-child(even) { background: $stock-band; }
+    > * { border-bottom: 1px solid $rule-hair; }
 
-    > div { padding: 15px 16px; }
+    // Header takes row 1, then one row per entry.
+    @for $i from 1 through 8 {
+      > *:nth-child(#{$i}) { grid-row: $i; }
+    }
 
-    > div + div { border-left: 1px solid $rule-hair; }
+    // Green-bar banding on alternate entries — the header is row 1, so the
+    // banded entries are the odd-numbered children after it.
+    > *:nth-child(odd):not(:first-child) { background: $stock-band; }
 
-    @include below($bp-md) {
-      grid-template-columns: 1fr;
+    &--eng > * { grid-column: 1; }
 
-      > div + div {
-        border-left: 0;
-        border-top: 1px solid $rule-hair;
+    &--fin > * {
+      grid-column: 2;
+      border-left: 1px solid $rule-hair;
+    }
+  }
+
+  &__head {
+    @include meta;
+    padding: 11px 16px;
+    color: $red;   // both sides of the balance head carry the oxblood accent
+  }
+
+  &__cell { padding: 15px 16px; }
+
+  // Narrow screens stack the two sides as separate blocks, each opening
+  // with its own heavy rule.
+  @include below($bp-md) {
+    &__cols { display: block; }
+
+    &__col {
+      display: block;
+
+      &--fin {
+        margin-top: 28px;
+        border-top: 2px solid $rule-ink;
+
+        > * { border-left: 0; }
       }
     }
   }

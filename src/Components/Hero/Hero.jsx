@@ -1,23 +1,34 @@
 import './Hero.scss';
 import Button from '../Button/Button';
 
-// The double-entry ledger: what came in from a decade in finance on the
-// left, what it posts as in engineering on the right. Both columns must
+// The double-entry ledger: what it posts as in engineering on the left,
+// what came in from a decade in finance on the right. Both columns must
 // stay the same length so the book balances.
-const BALANCE = [
-    {
-        debit: 'Institutional Finance', debitNote: 'Over a decade',
-        credit: 'Node.js & Express', creditNote: 'APIs & services',
-    },
-    {
-        debit: 'Finance & Math', debitNote: 'Analytical rigor',
-        credit: 'JavaScript & React', creditNote: 'Interfaces that ship',
-    },
-    {
-        debit: 'Commercial Mindset', debitNote: 'Built for the business',
-        credit: 'MySQL & CI/CD', creditNote: 'Data & delivery',
-    },
+const ENGINEERING = [
+    { entry: 'Node.js & Express', note: 'APIs & services' },
+    { entry: 'JavaScript & React', note: 'Interfaces that ship' },
+    { entry: 'MySQL & CI/CD', note: 'Data & delivery' },
 ];
+
+const FINANCE = [
+    { entry: 'Institutional Finance', note: 'Over a decade' },
+    { entry: 'Finance & Math', note: 'Analytical rigor' },
+    { entry: 'Commercial Mindset', note: 'Built for the business' },
+];
+
+// One side of the balance. The two sides sit on a shared grid on wide
+// screens; on narrow ones each column stacks as its own ruled block.
+const BalanceColumn = ({ side, label, entries }) => (
+    <div className={`balance__col balance__col--${side}`}>
+        <div className="balance__head">{label}</div>
+        {entries.map((row) => (
+            <div className="balance__cell" key={row.entry}>
+                <span className="balance__entry">{row.entry}</span>
+                <span className="balance__note">{row.note}</span>
+            </div>
+        ))}
+    </div>
+);
 
 const Hero = () => {
     return (
@@ -42,23 +53,10 @@ const Hero = () => {
                 <div className="balance">
                     <div className="rule-ink" />
 
-                    <div className="balance__head">
-                        <div className="meta">Finance</div>
-                        <div className="meta">Engineering</div>
+                    <div className="balance__cols">
+                        <BalanceColumn side="eng" label="Engineering" entries={ENGINEERING} />
+                        <BalanceColumn side="fin" label="Finance" entries={FINANCE} />
                     </div>
-
-                    {BALANCE.map((row) => (
-                        <div className="balance__row" key={row.debit}>
-                            <div>
-                                <span className="balance__entry">{row.debit}</span>
-                                <span className="balance__note">{row.debitNote}</span>
-                            </div>
-                            <div>
-                                <span className="balance__entry">{row.credit}</span>
-                                <span className="balance__note">{row.creditNote}</span>
-                            </div>
-                        </div>
-                    ))}
 
                     <div className="balance__foot">
                         <span className="meta">Balance c/f</span>
