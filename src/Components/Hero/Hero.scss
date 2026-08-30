@@ -96,18 +96,42 @@
     color: $red;   // both sides of the balance head carry the oxblood accent
   }
 
-  &__cell { padding: 15px 16px; }
+  &__cell {
+    padding: 15px 16px;
 
-  // Narrow screens stack the two sides as separate blocks, each opening
-  // with its own heavy rule.
+    // Same marked-entry treatment as the Stack and Featured rows, and
+    // gated the same way — pointer devices only, so a tap on touch can't
+    // leave a cell stuck in the highlighted state.
+    @include can-hover {
+      transition: background .15s ease, box-shadow .15s ease;
+
+      .balance__entry { transition: color .15s ease; }
+
+      // The banding rule on .balance__col carries three class-level
+      // components, so this has to outrank it or banded cells would keep
+      // their green-bar fill on hover.
+      .balance__cols .balance__col > &:hover {
+        background: $stock-sunk;
+        box-shadow: inset 3px 0 0 $red;
+
+        .balance__entry { color: $red; }
+      }
+    }
+  }
+
+  // Narrow screens stack the two sides flush, each opening with its own
+  // heavy rule.
   @include below($bp-md) {
     &__cols { display: block; }
 
     &__col {
       display: block;
 
+      // Finance's opening rule also closes engineering, so drop the
+      // hairline that would otherwise sit directly beneath it.
+      &--eng > *:last-child { border-bottom: 0; }
+
       &--fin {
-        margin-top: 28px;
         border-top: 2px solid $rule-ink;
 
         > * { border-left: 0; }

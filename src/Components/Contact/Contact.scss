@@ -20,13 +20,29 @@
     align-items: baseline;
     padding: 16px;
     border-bottom: 1px solid $rule-hair;
-    transition: background .15s ease;
+    transition: background .15s ease, box-shadow .15s ease;
 
     &:last-child { border-bottom: 0; }
     &:nth-child(even) { background: $stock-band; }
-    &:hover { background: $stock-sunk; }
 
-    &:hover .contact__val { color: $red; }
+    // The row is a link, so it keeps its feedback on both — but a tap has
+    // to drive it on touch, where a hover state would stick after the tap.
+    @include can-hover {
+      &:hover {
+        background: $stock-sunk;
+        box-shadow: inset 3px 0 0 $red;
+
+        .contact__val { color: $red; }
+      }
+    }
+
+    @include no-hover {
+      &:active {
+        background: $stock-sunk;
+
+        .contact__val { color: $red; }
+      }
+    }
 
     @include below($bp-sm) {
       grid-template-columns: 1fr;
@@ -38,7 +54,14 @@
     @include display(17px, 600, 0);
     text-transform: none;
     word-break: break-word;
+    transition: color .15s ease;
   }
 
-  &__cta { margin-top: 28px; }
+  // Same solid + ghost pairing as .hero__actions.
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
 }

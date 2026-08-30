@@ -29,3 +29,16 @@
 @mixin below($bp) {
   @media (max-width: $bp) { @content; }
 }
+
+// Hover belongs to real pointers on wide layouts. A touch device latches a
+// hover state after a tap and holds it until the next tap lands elsewhere,
+// which reads as a row stuck in a highlighted state.
+@mixin can-hover($bp: $bp-md) {
+  @media (hover: hover) and (min-width: #{$bp + 1px}) { @content; }
+}
+
+// The exact complement of can-hover: touch input, or a narrow layout.
+// Press feedback (:active) goes here instead.
+@mixin no-hover($bp: $bp-md) {
+  @media (hover: none), (max-width: $bp) { @content; }
+}

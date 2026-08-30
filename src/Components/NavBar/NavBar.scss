@@ -19,12 +19,46 @@
     padding: 16px 0;
   }
 
+  // Brand plus the back-to-top chevron, kept together as one unit so the
+  // chevron appearing can't shift the rest of the header.
+  &__id {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
   &__brand {
     @include display(14px, 700, .1em);
 
     em {
       font-style: normal;
       color: $red;
+    }
+  }
+
+  // Only shows once the page is scrolled. It holds its space either way,
+  // so the brand does not jump when it fades in.
+  &__top {
+    display: inline-flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease, visibility .2s ease;
+
+    &--shown {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-icon {
+      display: block;
+      width: 18px;
+      height: 18px;
+      transition: transform .15s ease;
+    }
+
+    @include can-hover {
+      &:hover .nav__top-icon { transform: translateY(-2px); }
     }
   }
 
@@ -61,7 +95,7 @@
       padding: 12px 0;
     }
 
-    &__brand { flex: 1 0 100%; }
+    &__id { flex: 1 0 100%; }
 
     &__links {
       flex: 1 0 100%;

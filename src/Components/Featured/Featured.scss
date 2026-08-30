@@ -12,10 +12,23 @@
   grid-template-columns: 90px 1fr;
   padding: 24px 16px;
   border-bottom: 1px solid $rule-hair;
-  transition: background .15s ease;
 
   &:nth-child(even) { background: $stock-band; }
-  &:hover           { background: $stock-sunk; }
+
+  // Pointer devices only — on touch the row keeps the plain banded look
+  // and the Live / Repo links carry the interaction on their own.
+  @include can-hover {
+    transition: background .15s ease, box-shadow .15s ease;
+
+    .entry__name { transition: color .15s ease; }
+
+    &:hover {
+      background: $stock-sunk;
+      box-shadow: inset 3px 0 0 $red;
+
+      .entry__name { color: $red; }
+    }
+  }
 
   &__ref {
     @include meta;
