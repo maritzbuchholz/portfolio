@@ -20,7 +20,7 @@
     align-items: baseline;
     padding: 16px;
     border-bottom: 1px solid $rule-hair;
-    transition: background .15s ease;
+    transition: background .15s ease, box-shadow .15s ease;
 
     &:last-child { border-bottom: 0; }
     &:nth-child(even) { background: $stock-band; }
@@ -30,6 +30,7 @@
     @include can-hover {
       &:hover {
         background: $stock-sunk;
+        box-shadow: inset 3px 0 0 $red;
 
         .contact__val { color: $red; }
       }
@@ -53,6 +54,7 @@
     @include display(17px, 600, 0);
     text-transform: none;
     word-break: break-word;
+    transition: color .15s ease;
   }
 
   &__cta { margin-top: 28px; }
