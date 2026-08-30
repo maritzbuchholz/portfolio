@@ -18,6 +18,15 @@
     line-height: .92;
     margin: 0;
 
+    // "Buchholz" is one unbreakable word and sets the width of the block.
+    // $fs-display bottoms out at a fixed 3rem, which is wider than the
+    // column below ~320px, so on narrow screens let it fall past that
+    // floor. 15vw only undercuts 3rem below 320px — every width above
+    // that keeps the display size untouched.
+    @include below($bp-sm) {
+      font-size: min(#{$fs-display}, 15vw);
+    }
+
     span {
       display: block;
       color: $red;
