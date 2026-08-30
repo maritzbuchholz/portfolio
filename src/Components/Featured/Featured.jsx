@@ -40,8 +40,8 @@ const Featured = () => {
     return (
         <Section
             id="work"
-            folio="03"
-            label={`Entries — ${String(PROJECTS.length).padStart(2, '0')}`}
+            number="03"
+            label={`PROJECTS`}
             title={<>Featured <em>work</em></>}
         >
             <div className="entries">

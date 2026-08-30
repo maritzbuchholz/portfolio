@@ -27,7 +27,7 @@ const Contact = () => {
     return (
         <Section
             id="contact"
-            folio="04"
+            number="04"
             label="Contact"
             title={<>Contact <em>Me</em></>}
         >

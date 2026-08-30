@@ -12,8 +12,8 @@ const Stack = () => {
     return (
         <Section
             id="stack"
-            folio="02"
-            label={`Accounts — ${String(ACCOUNTS.length).padStart(2, '0')}`}
+            number="02"
+            label={`STACK`}
             title={<>Tech <em>stack</em></>}
         >
             <div className="accounts">

@@ -3,7 +3,7 @@ import './About.scss';
 
 const About = () => {
     return (
-        <Section id="about" folio="01" label="About" title={<>About <em>me</em></>}>
+        <Section id="about" number="01" label="About" title={<>About <em>me</em></>}>
             <div className="about__body">
                 <p>
                     I am a backend engineer who strives to write robust and efficient code. With a background in finance and math, I approach every project with analytical rigor and a commercial mindset.
