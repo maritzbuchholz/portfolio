@@ -1,6 +1,16 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
+// The marked-row look, defined once. Pointer and touch reach it through
+// different pseudo-classes, and keeping one definition stops the two from
+// drifting apart.
+@mixin row-marked {
+  background: $stock-sunk;
+  box-shadow: inset 3px 0 0 $red;
+
+  .contact__val { color: $red; }
+}
+
 .contact {
   &__lead {
     max-width: 52ch;
@@ -28,20 +38,11 @@
     // The row is a link, so it keeps its feedback on both — but a tap has
     // to drive it on touch, where a hover state would stick after the tap.
     @include can-hover {
-      &:hover {
-        background: $stock-sunk;
-        box-shadow: inset 3px 0 0 $red;
-
-        .contact__val { color: $red; }
-      }
+      &:hover { @include row-marked; }
     }
 
     @include no-hover {
-      &:active {
-        background: $stock-sunk;
-
-        .contact__val { color: $red; }
-      }
+      &:active { @include row-marked; }
     }
 
     @include below($bp-sm) {
