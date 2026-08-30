@@ -98,16 +98,19 @@
 
   &__cell { padding: 15px 16px; }
 
-  // Narrow screens stack the two sides as separate blocks, each opening
-  // with its own heavy rule.
+  // Narrow screens stack the two sides flush, each opening with its own
+  // heavy rule.
   @include below($bp-md) {
     &__cols { display: block; }
 
     &__col {
       display: block;
 
+      // Finance's opening rule also closes engineering, so drop the
+      // hairline that would otherwise sit directly beneath it.
+      &--eng > *:last-child { border-bottom: 0; }
+
       &--fin {
-        margin-top: 28px;
         border-top: 2px solid $rule-ink;
 
         > * { border-left: 0; }
