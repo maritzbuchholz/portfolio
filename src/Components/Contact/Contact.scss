@@ -24,9 +24,24 @@
 
     &:last-child { border-bottom: 0; }
     &:nth-child(even) { background: $stock-band; }
-    &:hover { background: $stock-sunk; }
 
-    &:hover .contact__val { color: $red; }
+    // The row is a link, so it keeps its feedback on both — but a tap has
+    // to drive it on touch, where a hover state would stick after the tap.
+    @include can-hover {
+      &:hover {
+        background: $stock-sunk;
+
+        .contact__val { color: $red; }
+      }
+    }
+
+    @include no-hover {
+      &:active {
+        background: $stock-sunk;
+
+        .contact__val { color: $red; }
+      }
+    }
 
     @include below($bp-sm) {
       grid-template-columns: 1fr;

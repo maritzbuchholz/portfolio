@@ -22,10 +22,24 @@
   align-items: baseline;
   padding: 17px 16px;
   border-bottom: 1px solid $rule-hair;
-  transition: background .15s ease;
 
   &:nth-child(even) { background: $stock-band; }
-  &:hover           { background: $stock-sunk; }
+
+  // Pointer devices only — on touch the row keeps the plain banded look.
+  // The oxblood rule carries the emphasis so the fill can stay light
+  // enough for the mono entries to hold their contrast.
+  @include can-hover {
+    transition: background .15s ease, box-shadow .15s ease;
+
+    .account__name { transition: color .15s ease; }
+
+    &:hover {
+      background: $stock-sunk;
+      box-shadow: inset 3px 0 0 $red;
+
+      .account__name { color: $red; }
+    }
+  }
 
   &__no {
     @include meta;
