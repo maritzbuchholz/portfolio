@@ -2,29 +2,21 @@ import Section from '../Section/Section';
 import './Featured.scss';
 
 const PROJECTS = [
-    // {
-    //     ref: "000",
-    //     name: "Stare (WIP)",
-    //     description: "A band website with merchant capabilities",
-    //     stack: ["Stripe"],
-    //     repo: "#",
-    //     live: "#"
-    // },
     {
         ref: "001",
-        name: "Instock",
-        description: "Team built inventory management system",
-        stack: ["React", "Express.js", "MySQL", "Heroku"],
-        repo: "https://github.com/maritzbuchholz/instock-client",
-        live: "https://instock-maritz.netlify.app/"
+        name: "Stare",
+        description: "A band website with merchant capabilities",
+        stack: ["Stripe", "TypeScript", "React", "Express.js", "MySQL", "Railway", "Claude"],
+        repo: "https://github.com/maritzbuchholz/stare-server",
+        live: "https://starenyhc.netlify.app/"
     },
     {
         ref: "002",
-        name: "LoveBug",
-        description: "Front-end wireframe of relationship app",
-        stack: ["React", "JavaScript", "Antigravity"],
-        repo: "https://github.com/maritzbuchholz/lovebug-client",
-        live: "https://lovebug26.netlify.app/"
+        name: "Instock",
+        description: "Team built inventory management system",
+        stack: ["React", "Express.js", "MySQL", "Railway"],
+        repo: "https://github.com/maritzbuchholz/instock-server",
+        live: "https://instock-maritz.netlify.app/"
     },
     {
         ref: "003",
@@ -33,6 +25,14 @@ const PROJECTS = [
         stack: ["Tone.js", "Web Audio API"],
         repo: "https://github.com/maritzbuchholz/Metalnome",
         live: "https://met6lnome.netlify.app/"
+    },
+    {
+        ref: "004",
+        name: "LoveBug",
+        description: "Front-end wireframe of relationship app",
+        stack: ["React", "JavaScript", "Antigravity"],
+        repo: "https://github.com/maritzbuchholz/lovebug-client",
+        live: "https://lovebug26.netlify.app/"
     },
 ];
 
