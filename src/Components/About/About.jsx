@@ -6,7 +6,7 @@ const About = () => {
         <Section id="about" number="01" label="About" title={<>About <em>me</em></>}>
             <div className="about__body">
                 <p>
-                    I am a backend engineer who strives to write robust and efficient code. With a background in finance and math, I approach every project with analytical rigor and a commercial mindset.
+                    I am a backend engineer who strives to write robust and efficient code while leveraging AI tools. With a background in finance and math, I approach every project with a commercial mindset and analytical rigor.
                 </p>
                 <p>
                     When I'm not coding, you'll find me playing the drums, watching reality TV, or rooting for the Mets!
