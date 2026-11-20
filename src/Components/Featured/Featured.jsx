@@ -5,8 +5,8 @@ const PROJECTS = [
     {
         ref: "001",
         name: "Stare",
-        description: "A band website with merchant capabilities",
-        stack: ["Stripe", "TypeScript", "React", "Express.js", "MySQL", "Railway", "Claude"],
+        description: "Band website with merchant capabilities",
+        stack: ["Stripe Checkout", "TypeScript", "Node.js", "Express.js", "React", "MySQL", "Railway", "Claude Code"],
         repo: "https://github.com/maritzbuchholz/stare-server",
         live: "https://starenyhc.netlify.app/"
     },
@@ -14,23 +14,23 @@ const PROJECTS = [
         ref: "002",
         name: "Instock",
         description: "Team built inventory management system",
-        stack: ["React", "Express.js", "MySQL", "Railway"],
+        stack: ["JavaScript", "Node.js", "Express.js", "React", "MySQL", "Netlify", "Railway"],
         repo: "https://github.com/maritzbuchholz/instock-server",
         live: "https://instock-maritz.netlify.app/"
     },
     {
         ref: "003",
         name: "Metalnome",
-        description: "A metronome for metalheads with mobile functionality",
-        stack: ["Tone.js", "Web Audio API"],
+        description: "Metronome for metalheads with mobile functionality",
+        stack: ["JavaScript", "Tone.js", "Web Audio API", "Netlify", "GitHub Actions", "Antigravity", "Claude Code"],
         repo: "https://github.com/maritzbuchholz/Metalnome",
         live: "https://met6lnome.netlify.app/"
     },
     {
         ref: "004",
         name: "LoveBug",
-        description: "Front-end wireframe of relationship app",
-        stack: ["React", "JavaScript", "Antigravity"],
+        description: "Team built frontend wireframe of a relationship app",
+        stack: ["JavaScript", "React", "Netlify", "Antigravity"],
         repo: "https://github.com/maritzbuchholz/lovebug-client",
         live: "https://lovebug26.netlify.app/"
     },

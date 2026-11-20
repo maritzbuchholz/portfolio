@@ -2,10 +2,10 @@ import Section from '../Section/Section';
 import './Stack.scss';
 
 const ACCOUNTS = [
-    { no: '01', name: 'Languages', items: ['TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Python'] },
-    { no: '02', name: 'Backend', items: ['Node.js', 'Express.js', 'RESTful APIs', 'MySQL'] },
-    { no: '03', name: 'DevOps & CI/CD', items: ['Git', 'GitHub', 'GitHub Actions', 'Netlify', 'Heroku'] },
-    { no: '04', name: 'Tools & Platforms', items: ['Agile / Scrum', 'Jira', 'Vite', 'npm', 'Antigravity', 'Claude Code'] },
+    { no: '01', name: 'Languages', items: ['TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Python', 'C++'] },
+    { no: '02', name: 'Backend', items: ['Node.js', 'Express.js', 'RESTful APIs', 'Stripe Checkout', 'MySQL'] },
+    { no: '03', name: 'DevOps & CI/CD', items: ['Git', 'GitHub', 'Railway', 'Heroku', 'Netlify', 'GitHub Actions'] },
+    { no: '04', name: 'Tools & Platforms', items: ['Agile / Scrum', 'Jira', 'Vite', 'npm', 'Claude Code', 'Antigravity'] },
 ];
 
 const Stack = () => {
