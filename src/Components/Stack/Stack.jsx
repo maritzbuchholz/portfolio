@@ -2,10 +2,12 @@ import Section from '../Section/Section';
 import './Stack.scss';
 
 const ACCOUNTS = [
-    { no: '01', name: 'Languages', items: ['TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Python', 'C++'] },
-    { no: '02', name: 'Backend', items: ['Node.js', 'Express.js', 'RESTful APIs', 'Stripe Checkout', 'MySQL'] },
-    { no: '03', name: 'DevOps & CI/CD', items: ['Git', 'GitHub', 'Railway', 'Heroku', 'Netlify', 'GitHub Actions'] },
-    { no: '04', name: 'Tools & Platforms', items: ['Agile / Scrum', 'Jira', 'Vite', 'npm', 'Claude Code', 'Antigravity'] },
+    { no: '01', name: 'Languages', items: ['TypeScript', 'JavaScript (ES6+)', 'Python', 'C++'] },
+    { no: '02', name: 'Backend & Payments', items: ['Node.js', 'Express.js', 'RESTful APIs', 'Stripe Checkout', 'MySQL', 'Postman'] },
+    { no: '03', name: 'DevOps & CI/CD', items: ['Git', 'GitHub', 'GitHub Actions', 'Railway', 'Heroku', 'Netlify'] },
+    { no: '04', name: 'Tools & Platforms', items: ['Jira', 'Agile / Scrum', 'npm'] },
+    { no: '05', name: 'Frontend', items: ['React', 'HTML5', 'Sass', 'Figma', 'Vite'] },
+    { no: '06', name: 'AI Tools', items: ['Claude Code', 'Antigravity'] },
 ];
 
 const Stack = () => {
