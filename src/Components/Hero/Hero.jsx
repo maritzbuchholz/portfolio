@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 // stay the same length so the book balances.
 const ENGINEERING = [
     { entry: 'Node.js & Express', note: 'APIs & services' },
-    { entry: 'JavaScript & React', note: 'Interfaces that ship' },
+    { entry: 'TypeScript & React', note: 'Interfaces that ship' },
     { entry: 'MySQL & CI/CD', note: 'Data & delivery' },
 ];
 
